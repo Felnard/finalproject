@@ -36,18 +36,28 @@ nav div {
   align-items: center;
   justify-content: space-around;
   width: 50%;
+  position: relative;
 }
 
 body {
   background-color: white;
   overflow-x: hidden;
 }
+span {
+  color: #48d6d6;
+  padding: 10px;
+}
+div.words {
+  margin: 0 auto;
+  background-color: #2d8ac0;
+  margin: 40px 160px;
+}
 p.about {
   background-color: #6c5cc8;
   font-family: "Lato", sans-serif;
-  margin: 40px 160px;
   line-height: 2;
   font-size: 1.1rem;
+  padding: 30px;
   color: white;
 }
 p.about:nth-last-of-type(2n) {

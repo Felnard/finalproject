@@ -37,15 +37,11 @@ nav div {
   width: 50%;
   position: relative;
 }
-/* IFRAME */
-iframe {
-  width: 40px;
-  height: 40px;
-  z-index: 1;
-  position: sticky;
-  right: 0px;
-  top: 0px;
+span {
+  color: #48d6d6;
+  padding: 10px;
 }
+
 body {
   background-color: white;
   overflow-x: hidden;

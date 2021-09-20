@@ -17,6 +17,7 @@ div {
   align-items: center;
 }
 p {
+  text-align: center;
   font-size: 14rem;
   color: white;
   font-family: "Josefin Sans", sans-serif;
@@ -30,4 +31,20 @@ a {
   border: 1px solid white;
   color: white;
   padding: 15px 40px;
+}
+@media (max-width: 1200px) {
+  p {
+    font-size: 10rem;
+  }
+  p#name {
+    font-size: 6rem;
+  }
+}
+@media (max-width: 1000px) {
+  p {
+    font-size: 6rem;
+  }
+  p#name {
+    font-size: 4rem;
+  }
 }

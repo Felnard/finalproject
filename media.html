@@ -19,7 +19,9 @@
       <div>
         <a href="media.html">Media</a><a href="news.html">News</a>
         <a href="calendar.html">Live Show</a><a href="about.html">About</a>
-        <input type="checkbox" id="dark" />
+        <span
+          ><i class="fas fa-adjust"></i> <input type="checkbox" id="dark"
+        /></span>
       </div>
     </nav>
 
@@ -51,15 +53,21 @@
     </div>
 
     <div class="photos">
-      <img src="media/7.jpg" alt="" />
-      <img src="media/1.jpg" alt="" />
-      <img src="media/2.jpg" alt="" />
-      <img src="media/3.jpg" alt="" />
-      <img src="media/4.jpg" alt="" />
-      <img src="media/5.jpg" alt="" />
+      <img src="media/7.jpg" alt="" id="image" />
+      <img src="media/1.jpg" alt="" id="image1" />
+      <img src="media/2.jpg" alt="" id="image2" />
+      <img src="media/3.jpg" alt="" id="image3" />
+      <img src="media/4.jpg" alt="" id="image4" />
+      <img src="media/5.jpg" alt="" id="image5" />
       <img src="media/6.jpg" alt="" />
       <img src="media/8.jpg" alt="" />
     </div>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" />
+    </div>
+
     <footer>
       <div class="social">
         <a href=""><i class="fab fa-facebook"></i></a
@@ -80,5 +88,26 @@
       </div>
     </footer>
     <script src="dark.js"></script>
+
+    <!-- MODAL -->
+    <script>
+      var img = document.getElementById("image");
+      var modalImg = document.getElementById("img01");
+      var modal = document.getElementById("myModal");
+
+      $(document).ready(function () {
+        $("img").on({
+          click: function () {
+            var link = $(this).attr("src");
+            $(modal).css("display", "block");
+            $(modalImg).attr("src", link);
+          },
+        });
+      });
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+    </script>
   </body>
 </html>
